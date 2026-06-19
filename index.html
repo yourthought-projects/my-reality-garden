@@ -5,38 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Reality Garden | Agricultura Sustentable para Todos</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuración de Paleta de Colores Elegante -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sage: {
+                            50: '#f4f6f4',
+                            100: '#e3ebe3',
+                            500: '#7a9678',
+                            600: '#5c765a',
+                            700: '#415440',
+                        },
+                        terracotta: {
+                            500: '#c86f53',
+                            600: '#b05b41',
+                        },
+                        charcoal: {
+                            800: '#2a2f2c',
+                            900: '#1a1d1b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Open Sans', sans-serif; }
         h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
         .hero-bg {
-            /* Mantenemos el degradado negro para que el texto blanco se lea bien */
-            /* Y cambiamos la URL larga por el nombre de tu archivo local */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/fondo.png');
-            
+            /* Degradado carbón para mejor lectura y ruta relativa a /assets/ */
+            background-image: linear-gradient(rgba(42, 47, 44, 0.7), rgba(42, 47, 44, 0.7)), url('assets/fondo.png');
             background-size: cover;
             background-position: center;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-sage-50 text-charcoal-800">
 
-    <nav class="bg-white shadow-md py-4">
+    <nav class="bg-white shadow-md py-2">
         <div class="container mx-auto px-6 flex justify-between items-center">
-            <div class="text-2xl font-bold text-green-700">My Reality Garden</div>
-            </div>
+            <!-- Aumentamos la altura de h-16 a h-28 (o h-32 en pantallas grandes) -->
+            <a href="#" class="flex items-center">
+                <img src="assets/logo.png" alt="Logo My Reality Garden" class="h-28 md:h-32 w-auto object-contain object-left">
+            </a>
+        </div>
     </nav>
 
     <header class="hero-bg h-screen flex items-center justify-center text-center px-6">
         <div class="max-w-3xl">
             <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
                 De la Tierra a tu Mesa: <br>
-                <span class="text-green-400">Cultiva tu Propio Alimento</span>
+                <!-- Acento Terracota para contraste elegante -->
+                <span class="text-terracotta-500">Cultiva tu Propio Alimento</span>
             </h1>
-            <p class="text-xl text-gray-200 mb-8">
+            <p class="text-xl text-sage-100 mb-8">
                 Descubre cómo trabajar con la naturaleza y no en su contra. Convierte tu balcón o patio en un ecosistema productivo en solo 5 pasos.
             </p>
-            <a href="#registro" class="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+            <a href="#registro" class="bg-sage-600 hover:bg-sage-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
                 DESCARGAR MANUAL GRATIS
             </a>
         </div>
@@ -44,42 +74,43 @@
 
     <section class="py-20 container mx-auto px-6">
         <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-gray-800 mb-4">¿Crees que necesitas un campo para cultivar?</h2>
-            <p class="text-lg text-gray-600">La agricultura sustentable es posible en la ciudad si sigues la guía correcta.</p>
+            <h2 class="text-3xl font-bold text-charcoal-900 mb-4">¿Crees que necesitas un campo para cultivar?</h2>
+            <p class="text-lg text-charcoal-800">La agricultura sustentable es posible en la ciudad si sigues la guía correcta.</p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-10">
-            <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-green-500">
+            <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-sage-500">
                 <div class="text-4xl mb-4">🏙️</div>
                 <h3 class="text-xl font-bold mb-3">Ideal para Espacios Pequeños</h3>
-                <p class="text-gray-600">
+                <p class="text-charcoal-800">
                     Aprende a usar <strong>macetas y contenedores</strong> de 25-30 cm para cultivar en balcones y terrazas sin complicaciones.
                 </p>
             </div>
             
-            <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-green-500">
+            <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-sage-500">
                 <div class="text-4xl mb-4">🐞</div>
                 <h3 class="text-xl font-bold mb-3">Control Natural de Plagas</h3>
-                <p class="text-gray-600">
+                <p class="text-charcoal-800">
                     Olvídate de los químicos. Te enseñamos a usar <strong>asociación de cultivos</strong> (como tomate + albahaca) y remedios caseros con ajo y chile.
+                </p>
             </div>
 
-            <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-green-500">
+            <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-sage-500">
                 <div class="text-4xl mb-4">🌱</div>
                 <h3 class="text-xl font-bold mb-3">Suelo Vivo y Fértil</h3>
-                <p class="text-gray-600">
+                <p class="text-charcoal-800">
                     El secreto está en la tierra. Aprende a crear tu propio <strong>compost</strong> y a usar humus de lombriz para nutrir tus plantas gratis.
                 </p>
             </div>
         </div>
     </section>
 
-    <section id="registro" class="bg-green-50 py-20">
+    <section id="registro" class="bg-sage-100 py-20">
         <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
             
             <div class="md:w-1/2 mb-10 md:mb-0">
-                <h2 class="text-3xl font-bold mb-6 text-gray-800">Consigue el "Manual del Horticultor Sustentable"</h2>
-                <ul class="space-y-4 text-lg text-gray-700">
+                <h2 class="text-3xl font-bold mb-6 text-charcoal-900">Consigue el "Manual del Horticultor Sustentable"</h2>
+                <ul class="space-y-4 text-lg text-charcoal-800">
                     <li class="flex items-center">✅ <strong>Paso 1:</strong> Planificación y diseño según tu luz solar.</li>
                     <li class="flex items-center">✅ <strong>Paso 2:</strong> Preparación del sustrato y abonos.</li>
                     <li class="flex items-center">✅ <strong>Paso 3:</strong> Calendario de siembra y trasplante.</li>
@@ -88,27 +119,27 @@
             </div>
 
             <div class="md:w-1/2 bg-white p-10 rounded-xl shadow-2xl w-full max-w-md mx-auto">
-                <h3 class="text-2xl font-bold text-center mb-6 text-green-700">¡Empieza Tu Huerto Hoy!</h3>
+                <h3 class="text-2xl font-bold text-center mb-6 text-sage-700">¡Empieza Tu Huerto Hoy!</h3>
                 
                 <form id="contactForm" action="https://formspree.io/f/mpqzvyno" method="POST" class="space-y-4">
     
                     <div>
-                        <label class="block text-gray-700 text-sm font-bold mb-2">Nombre</label>
-                        <input type="text" name="name" placeholder="Tu nombre" required class="w-full px-4 py-3 rounded-lg bg-gray-100 border focus:border-green-500 focus:bg-white focus:outline-none">
+                        <label class="block text-charcoal-800 text-sm font-bold mb-2">Nombre</label>
+                        <input type="text" name="name" placeholder="Tu nombre" required class="w-full px-4 py-3 rounded-lg bg-sage-50 border focus:border-sage-500 focus:bg-white focus:outline-none">
                     </div>
                     <div>
-                        <label class="block text-gray-700 text-sm font-bold mb-2">Correo Electrónico</label>
-                        <input type="email" name="email" placeholder="tu@email.com" required class="w-full px-4 py-3 rounded-lg bg-gray-100 border focus:border-green-500 focus:bg-white focus:outline-none">
+                        <label class="block text-charcoal-800 text-sm font-bold mb-2">Correo Electrónico</label>
+                        <input type="email" name="email" placeholder="tu@email.com" required class="w-full px-4 py-3 rounded-lg bg-sage-50 border focus:border-sage-500 focus:bg-white focus:outline-none">
                     </div>
 
                     <div class="flex items-start mt-4">
                         <input type="checkbox" id="privacy" name="privacy_accepted" class="mt-1 mr-2" required>
-                        <label for="privacy" class="text-xs text-gray-500">
-                            He leído y acepto la <a href="privacidad.html" target="_blank" class="underline text-green-600">Política de Privacidad</a>.
+                        <label for="privacy" class="text-xs text-charcoal-800">
+                            He leído y acepto la <a href="privacidad.html" target="_blank" class="underline text-terracotta-600">Política de Privacidad</a>.
                         </label>
                     </div>
 
-                    <button type="submit" id="submitButton" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg transition duration-300">
+                    <button type="submit" id="submitButton" class="w-full bg-sage-600 hover:bg-sage-700 text-white font-bold py-3 rounded-lg transition duration-300">
                         QUIERO MI MANUAL GRATIS
                     </button>
                     
@@ -119,12 +150,11 @@
                     var form = document.getElementById("contactForm");
                     
                     async function handleSubmit(event) {
-                        event.preventDefault(); // Detiene el envío normal
+                        event.preventDefault(); 
                         var button = document.getElementById("submitButton");
                         var status = document.getElementById("statusMessage");
                         var data = new FormData(event.target);
 
-                        // Feedback visual (Cambiamos el texto del botón)
                         button.innerText = "Enviando...";
                         button.disabled = true;
 
@@ -136,18 +166,16 @@
                             }
                         }).then(response => {
                             if (response.ok) {
-                                // AQUÍ OCURRE LA MAGIA: Redirección forzada por el navegador
-                                // Usamos ruta relativa que suele ser más segura en este contexto
                                 window.location.href = "gracias.html"; 
                             } else {
                                 status.innerHTML = "Hubo un error al enviar. Intenta de nuevo.";
-                                status.classList.add("text-red-500");
+                                status.classList.add("text-terracotta-600");
                                 button.innerText = "Reintentar";
                                 button.disabled = false;
                             }
                         }).catch(error => {
                             status.innerHTML = "Error de conexión.";
-                            status.classList.add("text-red-500");
+                            status.classList.add("text-terracotta-600");
                             button.innerText = "Reintentar";
                             button.disabled = false;
                         });
@@ -159,10 +187,10 @@
         </div>
     </section>
 
-    <footer class="bg-gray-800 text-white py-8">
+    <footer class="bg-charcoal-900 text-sage-100 py-8">
         <div class="container mx-auto px-6 text-center">
-            <p class="mb-2">&copy; 2025 My Reality Garden. Todos los derechos reservados.</p>
-            <div class="text-sm text-gray-400 space-x-4">
+            <p class="mb-2">&copy; 2026 My Reality Garden. Todos los derechos reservados.</p>
+            <div class="text-sm text-sage-100 space-x-4">
                 <a href="terminos.html" class="hover:text-white">Términos y Condiciones</a>
                 <a href="privacidad.html" class="hover:text-white">Política de Privacidad</a>
             </div>
